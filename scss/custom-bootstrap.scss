@@ -1,0 +1,48 @@
+$primary: #004693;
+$secondary: #f19b02;
+$body-color: $primary;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  line-height: 1.2em;
+}
+
+.btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.6rem;
+  &.btn-secondary {
+    color: var(--font-light);
+  }
+}
+.form-control {
+  border-radius: 0.6rem;
+  border: 0.16rem solid var(--main);
+  &.error {
+    border-color: var(--red);
+  }
+}
+.message {
+  display: none;
+  color: var(--red);
+  margin: 0;
+  padding: 0 0.6rem;
+  line-height: 1em;
+}
+.error {
+  .message {
+    display: block;
+  }
+}
+.form-group {
+  &.error {
+    label,
+    .message {
+      color: var(--red);
+    }
+    .form-control {
+      border-color: var(--red);
+    }
+  }
+}

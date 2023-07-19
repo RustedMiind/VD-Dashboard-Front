@@ -1,0 +1,150 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+
+<main class="main-view">
+  <div class="section my-2">
+    <h2>Buttons</h2>
+    <h6>Works on buttons, anchors and input[type="button"]</h6>
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Element</th>
+          <th scope="col">Class name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="button" value="Primary" class="btn btn-primary" />
+          </td>
+          <td>btn btn-primary</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://facebook.com" class="btn btn-secondary"
+              >Secondary</a
+            >
+          </td>
+          <td>btn btn-secondary</td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-danger">Danger</button>
+          </td>
+          <td>btn btn-danger</td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-success">Success</button>
+          </td>
+          <td>btn btn-success</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="section my-2">
+    <h2>Inputs</h2>
+    <h6></h6>
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Element</th>
+          <th scope="col">Class name</th>
+          <th scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input placeholder="Primary" class="form-control" />
+          </td>
+          <td>form-control</td>
+          <td>text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="usr">Label</label>
+              <input
+                type="text"
+                class="form-control"
+                id="usr"
+                placeholder="Primary"
+              />
+            </div>
+          </td>
+          <td>
+            parent: form-group<br />
+            input: form-control
+          </td>
+          <td>text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="usr">Label</label>
+              <select type="text" class="form-control" id="usr">
+                <option value="">option 1</option>
+              </select>
+            </div>
+          </td>
+          <td>
+            parent: form-group<br />
+            select: form-control
+          </td>
+          <td>select</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="usr">Label</label>
+              <select type="text" class="form-control error" id="usr">
+                <option value="">option 1</option>
+              </select>
+            </div>
+          </td>
+          <td>
+            parent: form-group<br />
+            select or input: form-control error
+          </td>
+          <td>select & input</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group error">
+              <label for="usr">Label</label>
+              <select type="text" class="form-control" id="usr">
+                <option value="">option 1</option>
+              </select>
+              <div class="message">Error Message</div>
+            </div>
+          </td>
+          <td>
+            parent: form-group error<br />
+            select or input: form-control
+          </td>
+          <td>select & input</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="section my-2">
+    <h2>Layout</h2>
+    <h6>Follow The structure found in the image below</h6>
+    <div>
+      <img src="assets/code-images/layout.png" width="700px" alt="" srcset="" />
+    </div>
+  </div>
+  <div class="section my-2">
+    <h2>Icons</h2>
+    <div>
+      <a
+        href="https://lucide.dev/icons/"
+        target="_blank"
+        class="btn btn-primary"
+        >lucide.dev</a
+      >
+    </div>
+  </div>
+</main>
+
+{% endblock %}

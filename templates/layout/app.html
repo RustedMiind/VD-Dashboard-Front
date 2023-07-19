@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!-- meta-tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{{ page_title }}</title>
+    <meta name="description" content="Lorem description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="assets/css/all.css" > -->
+    <!-- bootstrap-rlt -->
+
+    <!-- main.style -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Vendor style -->
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <!-- IconSax -->
+    <!-- <link rel="stylesheet" href="assets/iconsax-css/style.css" /> -->
+
+    <!-- main-rtl.style -->
+    <!-- <link rel="stylesheet" href="assets/css/main-rtl.css" /> -->
+  </head>
+  <body>
+    <div id="app" class="layout" data-v-app="">
+      {% include "templates/components/sidebar.njk" %}
+      <div class="body-container">
+        {% include "templates/components/navbar.njk" %} {% block content %} {%
+        endblock %}
+      </div>
+    </div>
+  </body>
+
+  <script src="assets/js/vendor.js"></script>
+  <!-- main.js -->
+  <script src="assets/js/main.js"></script>
+  <!-- main.js -->
+  <script src="assets/js/index.js"></script>
+  <!-- main.js -->
+  <script src="assets/lucide/lucide.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</html>

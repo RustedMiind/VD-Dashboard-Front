@@ -1,0 +1,106 @@
+:root {
+  --sidebar-width: 20rem;
+  --sidebar-display: block;
+}
+
+.layout {
+  display: flex;
+  position: static;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  .body-container {
+    // display: --sidebar-display;
+    position: relative;
+    width: calc(100vw - var(--sidebar-width));
+    height: 100%;
+  }
+  .main-view {
+    max-height: calc(100% - 4.5rem);
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1.6rem;
+  }
+  .sidebar-logo {
+    text-align: center;
+    margin-bottom: 4.375rem;
+
+    img {
+      width: 6.875rem;
+      height: 4rem;
+      object-fit: contain;
+      margin-bottom: 0.9375rem;
+    }
+
+    figcaption {
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: var(--font-light);
+    }
+  }
+
+  .main-content {
+    width: 100%;
+
+    .main-Carousel {
+      max-width: 100%;
+    }
+
+    // margin-right: 15rem;
+    margin-top: 6rem;
+    padding: 1.875rem;
+    overflow: hidden;
+    height: calc(100% - 6rem);
+    overflow-y: scroll;
+    position: relative;
+  }
+
+  .main-sidebar {
+    position: relative;
+    width: var(--sidebar-width);
+    display: var(--sidebar-display);
+    right: 0;
+    background: var(--main);
+    transition: left 0.4s ease;
+    z-index: 9999;
+    padding: 2rem 0.25rem;
+    overflow-y: inherit;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    ul {
+      background: var(--main);
+
+      text-align: right;
+
+      li {
+        line-height: 3.75rem;
+
+        a {
+          position: relative;
+          color: var(--font-light);
+          text-decoration: none;
+          font-size: 1rem;
+          padding-right: 1rem;
+          font-weight: bold;
+          display: block;
+          width: 100%;
+          border-left: 0.1875rem solid transparent;
+        }
+      }
+    }
+
+    a {
+      i:before {
+        color: var(--font-light);
+      }
+    }
+  }
+}

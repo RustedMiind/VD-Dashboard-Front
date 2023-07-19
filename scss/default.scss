@@ -1,0 +1,312 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+$border-radius: 0.8em;
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// Search bar on top of the pages
+.search-inputs-container {
+  font-size: 1.2rem;
+  input {
+    outline: none;
+    border: 0.1rem solid #004693;
+    color: #004693;
+    padding: 0.8rem 1rem;
+    margin-left: 1rem;
+    border-radius: 0.6rem;
+    &:last-of-type {
+      margin-left: 0;
+    }
+  }
+}
+input.main-input {
+  outline: none;
+  border: 0.1em solid #004693;
+  color: #004693;
+  padding: 0.8em 1em;
+  border-radius: 0.6em;
+}
+
+// The main blue btn
+button.main-btn,
+a.main-btn {
+  font-size: 1em;
+  background-color: #004693;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  border: 0.1rem solid transparent;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  margin-left: 1em;
+  transition: 250ms ease-in;
+  i {
+    line-height: 0;
+    position: relative;
+    display: block;
+    padding-left: 0.4em;
+    color: inherit !important;
+  }
+
+  &:hover {
+    background-color: white;
+    color: #004693;
+    border: 0.1em solid #004693;
+  }
+}
+
+// Filter, Edit, Delete Buttons
+
+// <div class="filter-edit-delete-container">
+//           <button id="filter">
+//             <i class="icon-filter-square"></i>
+//             فلتر
+//           </button>
+//           <button class="disabled" id="delete">
+//             <i class="icon-trash"></i>
+//             حذف
+//           </button>
+//           <button id="edit">
+//             <i class="icon-edit"></i>
+//             تعديل
+//           </button>
+//         </div>
+
+.filter-edit-delete-container {
+  margin-bottom: 0.6em;
+  display: flex;
+  justify-content: flex-end;
+  height: fit-content !important;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #004693;
+  @media (max-width: 968px) {
+    margin-top: 0.5em;
+    border-top: 0.2em solid #004693;
+    justify-content: center;
+  }
+  button {
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    padding: 0.3em 1em;
+    // margin-top: 1em;
+    // height: 1.4em;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: inherit;
+    border: 0.1em solid #004693;
+    border-radius: 0.6em;
+    background-color: transparent;
+    margin-right: 0.6em;
+    &.disabled {
+      color: gray;
+      border-color: gray;
+      pointer-events: none;
+    }
+    i {
+      margin-left: 0.4em;
+      font-size: 1.4em;
+      color: inherit;
+      &::before {
+        color: inherit !important;
+      }
+    }
+  }
+}
+
+// Flex Properties
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.percentage::after {
+  content: "%";
+}
+
+form .two-inputs-container {
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .input-section {
+    width: 47.5%;
+  }
+}
+
+form .input-section {
+  &.can-be-collapsed {
+    .label-container {
+      padding: 0.4em 0em;
+      padding-right: 2em;
+      background-color: #f3f5f7;
+      // background-color: red;
+      border-radius: 1em;
+      margin-bottom: 0.5em;
+    }
+  }
+  display: inline-block;
+  margin-bottom: 0.4em;
+  width: 100%;
+  &.toggled {
+    .collapse-container {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+    > input,
+    > select,
+    > .content {
+      display: none;
+    }
+  }
+  .content {
+  }
+  .content.work-domain-container {
+    display: block;
+    width: 100%;
+    .def-card {
+      width: 100%;
+      padding: 1em 1.6em;
+      padding-left: 1.6em;
+      border-radius: $border-radius;
+      background-color: #004693;
+      color: white;
+      margin-bottom: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .add-button {
+        cursor: pointer;
+        line-height: 0;
+      }
+    }
+  }
+  .content.payment-terms-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: $border-radius;
+    border: 1px solid #004693;
+    padding: 1em;
+    .add-new-installment {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0.4em 1.2em;
+      outline: none;
+      border: none;
+      background-color: unset;
+      color: inherit;
+      cursor: pointer;
+      opacity: 0.7;
+      i.icon-add::before {
+        color: #004693;
+        line-height: 0;
+        margin-left: 0.4em;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .to-be-increased {
+      .term {
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        h3.title {
+          > input[type="checkbox"] {
+            box-sizing: content-box;
+            font-size: 1em;
+            padding: 0.2em;
+            width: 0.6em;
+            height: 0.6em;
+            display: inline-block;
+            border-radius: 0.3em;
+          }
+          margin-bottom: 0.6em;
+        }
+        .inputs-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          > * {
+            width: 49%;
+            margin-bottom: 1em;
+          }
+          > input[type="button"] {
+            background-color: #004693;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .label-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .collapse-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em 0;
+      img {
+        transition: 400ms;
+        transform: rotate(180deg);
+        margin: 0 2em;
+      }
+    }
+    label {
+      display: block;
+      width: fit-content;
+      // margin-bottom: 1em;
+      font-weight: 800;
+    }
+  }
+  &.toggled {
+    .collapse-container {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+    > input,
+    > select,
+    > .content {
+      display: none;
+    }
+  }
+  select,
+  input {
+    outline: none;
+    border: none;
+    border-radius: $border-radius;
+    border: 1px solid #004693;
+    color: #004693;
+    padding: 1em 1em;
+    width: 100%;
+    option {
+      color: #004693;
+      background-color: white;
+      &:checked,
+      &:hover {
+        background-color: #00479348;
+      }
+    }
+  }
+}
