@@ -1,54 +1,84 @@
-<nav class="navbar navbar-expand-lg">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">الهيكل التنظيمي</a></li>
-    <li class="breadcrumb-item"><a href="#">حالات العقود</a></li>
-    <li class="breadcrumb-item active" aria-current="page">اضافة عقد جديد</li>
-  </ol>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"
-          ><img
-            src="https://visiondimensions.com/assets/images/notification.svg"
-            alt="notification"
-        /></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          <div class="user-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359554_640.png"
-              alt=""
-            />
-          </div>
-          <div class="welcome-message">اهلا هالة</div>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">تسجيل الخروج</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">اعدادات الحساب</a>
-        </div>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <nav
+      style="
+        --bs-breadcrumb-divider: url(
+          &#34;data:image/svg + xml,
+          %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='%236c757d'/%3E%3C/svg%3E&#34;
+        );
+      "
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">الهيكل التنظيمي</a></li>
+        <li class="breadcrumb-item"><a href="#">العقود</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          العقود المحولة
+        </li>
+      </ol>
+    </nav>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px"
+      >
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle no-arrow"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="welcome-message"><i data-lucide="bell"></i></div>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><div class="user-img">
+              <img
+                src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359554_640.png"
+                alt=""
+              />
+            </div>
+            <div class="welcome-message">اهلا هالة</div>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

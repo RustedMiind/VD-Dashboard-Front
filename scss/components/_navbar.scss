@@ -72,6 +72,13 @@ nav.navbar {
   }
 }
 
+.no-arrow {
+  &::after {
+    content: none;
+    display: none;
+  }
+}
+
 // header {
 //   height: 100rem;
 //   background: $white-color !important;

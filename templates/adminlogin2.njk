@@ -1,0 +1,33 @@
+{% extends "templates/layout/admin-login.html" %} {% block adminContent %}
+<div class="login-card">
+  <div class="logo-container">
+    <img src="assets/images/logo.png" alt="" />
+  </div>
+  <h2>بوابة الموظف</h2>
+  <form class="login-form form-group">
+    <h4>تسجيل الدخول</h4>
+    <div class="label-container">
+      <p>برجاء ارسال كود التحقق المرسل اليك علي</p>
+      <p class="fw-bold">team@vmedia.com</p>
+    </div>
+    <input
+      name="otp"
+      id="otp-input"
+      type="text"
+      class="form-control hidden-input"
+      placeholder="ادخل كود التحقق"
+    />
+    <div class="otp-input-container" id="otp">
+      <div class="digit"></div>
+      <div class="digit"></div>
+      <div class="digit"></div>
+      <div class="digit"></div>
+      <div class="digit"></div>
+    </div>
+    <div class="d-flex align-items-center flex-column">
+      <button type="submit" class="btn btn-primary">التأكيد</button>
+    </div>
+  </form>
+</div>
+<script src="assets/js/adminLoginOtp.js"></script>
+{% endblock %}

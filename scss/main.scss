@@ -1,15 +1,18 @@
-@import "custom-bootstrap.scss";
 @import "bootstrap/scss/mixins";
 @import "./layout";
 @import "./components/navbar";
 @import "./components/table";
 @import "./components/sidebar";
 @import "./default.scss";
+@import "./pages/pages";
+@import "./fonts/fonts.scss";
 
 :root {
   --main: #004693;
   --main-transparent: #00469333;
   --main-background: #f3f5f7;
+  --main-bg-transparent: #f2f5f74d;
+  --dark-bg-transparent: #00234733;
   --sec: #f19b02;
   --font-light: white;
   --gray: #a7a7a7;
@@ -27,6 +30,7 @@
 body {
   color: var(--main);
   direction: rtl;
+  font-family: "The Sans AR";
 }
 
 a {
@@ -41,4 +45,13 @@ a {
   &.gray {
     background-color: var(--main-background);
   }
+}
+
+.hidden-input {
+  position: fixed;
+  left: -100%;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
 }

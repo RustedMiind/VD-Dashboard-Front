@@ -1,13 +1,88 @@
 <div class="main-sidebar">
-  <div class="icon-container"></div>
-  <nav class="side-navbar" id="sideBar">
-    <div class="links-class">
-      <div class="open-section">التقرير البياني</div>
-      <div class="container">
-        <a href="#" class="link">الفروع</a>
-        <a href="#" class="link">الادارة والاقسام</a>
-        <a href="#" class="link">ادارة العقود</a>
-      </div>
+  <div class="flex-shrink-0 p-3" style="width: 100%">
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="" />
     </div>
-  </nav>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button
+          class="btn btn-toggle align-items-center rounded collapsed px-1 fw-semibold py-2"
+          data-bs-toggle="collapse"
+          data-bs-target="#home-collapse"
+          aria-expanded="false"
+        >
+          <i data-lucide="chevron-down"></i>
+          <span>التقرير البياني</span>
+        </button>
+        <div class="collapse" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="rounded">Overview</a></li>
+            <li><a href="#" class="rounded">Updates</a></li>
+            <li><a href="#" class="rounded">Reports</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button
+          class="btn btn-toggle align-items-center rounded collapsed px-1 fw-semibold py-2"
+          data-bs-toggle="collapse"
+          data-bs-target="#dashboard-collapse"
+          aria-expanded="false"
+        >
+          <i data-lucide="chevron-down"></i>
+          <span>الادارة</span>
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li>
+              <a href="#" class="rounded"
+                >Overview bla bla bla ay klam to see the overflow action</a
+              >
+            </li>
+            <li><a href="#" class="rounded">Weekly</a></li>
+            <li><a href="#" class="rounded">Monthly</a></li>
+            <li><a href="#" class="rounded">Annually</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button
+          class="btn btn-toggle align-items-center rounded collapsed px-1 fw-semibold py-2"
+          data-bs-toggle="collapse"
+          data-bs-target="#orders-collapse"
+          aria-expanded="false"
+        >
+          <i data-lucide="chevron-down"></i>
+          <span>الطلبات</span>
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="rounded">New</a></li>
+            <li><a href="#" class="rounded">Processed</a></li>
+            <li><a href="#" class="rounded">Shipped</a></li>
+            <li><a href="#" class="rounded">Returned</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button
+          class="btn btn-toggle align-items-center rounded collapsed px-1 fw-semibold py-2"
+          data-bs-toggle="collapse"
+          data-bs-target="#account-collapse"
+          aria-expanded="false"
+        >
+          <i data-lucide="chevron-down"></i>
+          <span> الحساب</span>
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="rounded">New...</a></li>
+            <li><a href="#" class="rounded">Profile</a></li>
+            <li><a href="#" class="rounded">Settings</a></li>
+            <li><a href="#" class="rounded">Sign out</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

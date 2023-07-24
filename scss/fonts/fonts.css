@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: normal;
+  src: url("assets/fonts/TheSans-Plain.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 200;
+  src: url("assets/fonts/TheSans-Plain.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 300;
+  src: url("assets/fonts/TheSans-Plain.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 400;
+  src: url("assets/fonts/TheSans-Plain.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 500;
+  src: url("assets/fonts/TheSans-Bold.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 600;
+  src: url("assets/fonts/TheSans-Bold.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 700;
+  src: url("assets/fonts/TheSans-Bold.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 800;
+  src: url("assets/fonts/TheSans-Bold.otf");
+}
+@font-face {
+  font-family: "The Sans AR";
+  font-weight: 900;
+  src: url("assets/fonts/TheSans-Bold.otf");
+}

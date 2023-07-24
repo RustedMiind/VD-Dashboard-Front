@@ -10,16 +10,18 @@ const StyleLintPlugin = require("stylelint-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const path = require("path");
 const nunjuckspages = require("./nunjuckspages");
-
+const CssUrlRelativePlugin = require("css-url-relative-plugin");
 module.exports = (env) => {
   const devMode = !env || !env.production;
 
   return {
     mode: devMode ? "development" : "production",
     entry: {
+      vendor: "./src/vendor.js",
       main: "./src/index.js",
       index: "./src/ts/index.ts",
-      vendor: "./src/vendor.js",
+      adminLoginEmail: "./ts/adminLogin.ts",
+      adminLoginOtp: "./ts/adminLogin-otp.ts",
     },
     output: {
       path: path.join(__dirname, "dist"),
@@ -32,26 +34,30 @@ module.exports = (env) => {
           test: /\.(sa|sc|c)ss$/,
           use: [
             MiniCssExtractPlugin.loader,
-            { loader: "css-loader", options: { sourceMap: true } },
+            {
+              loader: "css-loader",
+              options: { sourceMap: true /* url: true */ },
+            },
             { loader: "postcss-loader", options: { sourceMap: true } },
+            { loader: "resolve-url-loader" },
             { loader: "sass-loader", options: { sourceMap: true } },
           ],
         },
-        {
-          test: /\.ts(x?)$/,
-          enforce: "pre",
-          exclude: /node_modules/,
-          use: [
-            {
-              loader: "eslint-loader",
-              options: {
-                options: {
-                  eslintPath: path.join(__dirname, "src/ts/"),
-                },
-              },
-            },
-          ],
-        },
+        // {
+        //   test: /\.ts(x?)$/,
+        //   enforce: "pre",
+        //   exclude: /node_modules/,
+        //   use: [
+        //     {
+        //       loader: "eslint-loader",
+        //       options: {
+        //         options: {
+        //           eslintPath: path.join(__dirname, "src/ts/"),
+        //         },
+        //       },
+        //     },
+        //   ],
+        // },
         {
           test: /\.ts(x?)$/,
           exclude: /node_modules/,
@@ -92,13 +98,13 @@ module.exports = (env) => {
           ],
         },
         {
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
               loader: "file-loader",
               options: {
                 name: "[name].[ext]",
-                outputPath: "fonts/",
+                outputPath: "assets/css/fonts/",
               },
             },
           ],
@@ -113,10 +119,12 @@ module.exports = (env) => {
       new NunjucksWebpackPlugin({
         templates: nunjuckspages,
       }),
+
+      new CssUrlRelativePlugin(/* options */),
       new MiniCssExtractPlugin({
         filename: "assets/css/[name].css",
       }),
-      new StyleLintPlugin(),
+      // new StyleLintPlugin(),
       new BrowserSyncPlugin({
         host: "localhost",
         port: 3000,
@@ -126,7 +134,7 @@ module.exports = (env) => {
         dirs: ["templates"],
       }),
       new CopyWebpackPlugin({
-        patterns: [{ from: "assets/**/*", to: ".", noErrorOnMissing: true }],
+        patterns: [{ from: "assets/**/*", to: ".", noErrorOnMissing: false }],
       }),
     ],
     optimization: {

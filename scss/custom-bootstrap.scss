@@ -1,8 +1,11 @@
 $primary: #004693;
 $secondary: #f19b02;
 $body-color: $primary;
-
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.table {
+  --#{$prefix}table-bg: transparent;
+}
 
 html {
   line-height: 1.2em;
@@ -16,9 +19,13 @@ html {
     color: var(--font-light);
   }
 }
-.form-control {
+.table {
+  background-color: transparent !important;
+}
+.form-control,
+.form-select {
   border-radius: 0.6rem;
-  border: 0.16rem solid var(--main);
+  border: 0.1rem solid var(--main);
   &.error {
     border-color: var(--red);
   }
@@ -35,7 +42,8 @@ html {
     display: block;
   }
 }
-.form-group {
+.form-group,
+.form-select {
   &.error {
     label,
     .message {
@@ -46,3 +54,17 @@ html {
     }
   }
 }
+
+.main-sidebar {
+  button,
+  a {
+    color: var(--font-light);
+  }
+  button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// .main-sidebar {
+// }

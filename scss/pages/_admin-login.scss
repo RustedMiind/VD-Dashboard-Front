@@ -1,0 +1,91 @@
+// $path: "/dist/assets/images/";
+.admin-login-layout {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/images/bg-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 2rem 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.5);
+  .logo-container {
+    width: 6rem;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+    margin: 1rem 0;
+    // margin-bottom: 1rem;
+  }
+  .login-form {
+    margin: 2rem 0;
+    width: 20rem;
+    p {
+      margin: 0;
+    }
+    .label-container {
+      margin: 0.6rem 0;
+    }
+    label {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    button {
+      margin: 0.6rem auto;
+    }
+  }
+  .otp-input-container {
+    direction: ltr;
+    width: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    &.error,
+    &.is-invalid {
+      .digit {
+        border-width: 0.15rem;
+        border-color: var(--red);
+        color: var(--red);
+      }
+    }
+    .digit {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      border: 0.1rem solid var(--main);
+      border-radius: 0.8rem;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      justify-content: center;
+      &.focus {
+        animation: onfocus 800ms;
+        animation-iteration-count: infinite;
+        outline: 0.15rem solid transparent;
+      }
+    }
+  }
+}
+@keyframes onfocus {
+  10% {
+    outline-color: #00479380;
+  }
+  80% {
+    outline-color: transparent;
+  }
+}

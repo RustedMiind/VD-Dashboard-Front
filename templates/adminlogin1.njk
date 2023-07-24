@@ -1,0 +1,22 @@
+{% extends "templates/layout/admin-login.html" %} {% block adminContent %}
+<div class="login-card">
+  <div class="logo-container">
+    <img src="assets/images/logo.png" alt="" />
+  </div>
+  <h2>بوابة الموظف</h2>
+  <form class="login-form form-group">
+    <h4>تسجيل الدخول</h4>
+    <label for="email">ادخل البريد الالكتروني المسجل لدينا</label>
+    <input
+      name="email"
+      type="text"
+      class="form-control"
+      placeholder="البريد الالكتروني"
+    />
+    <div class="d-flex align-items-center flex-column">
+      <button type="submit" class="btn btn-primary">ارسال كود التحقق</button>
+    </div>
+  </form>
+</div>
+<script src="assets/js/adminLoginEmail.js"></script>
+{% endblock %}

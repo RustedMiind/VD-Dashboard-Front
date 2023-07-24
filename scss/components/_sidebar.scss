@@ -11,4 +11,70 @@
   overflow-y: inherit;
   scrollbar-width: none;
   color: var(--font-light);
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    img {
+      width: 5rem;
+    }
+  }
+  button {
+    background: var(--dark-bg-transparent);
+    transition: 400ms ease-in-out;
+    width: 100%;
+    text-align: right;
+    position: relative;
+    span {
+      display: block;
+      transition: 500ms;
+      // margin-right: 50%;
+      // transform: translateX(50%);
+      width: fit-content;
+    }
+    svg {
+      transition: 400ms;
+      position: absolute;
+      left: 0;
+      // opacity: 0;
+      transform: rotate(180deg);
+    }
+
+    &.collapsed {
+      background: transparent;
+      span {
+        transform: translateX(0);
+        margin-right: 0;
+      }
+      svg {
+        // opacity: 1;
+        transform: rotate(0deg);
+      }
+      &:hover {
+        transition: 150ms;
+        background: var(--dark-bg-transparent);
+      }
+    }
+    &:hover {
+      transition: 150ms;
+      background: var(--dark-bg-transparent);
+    }
+  }
+  .btn-toggle-nav {
+    text-align: center;
+    li {
+      width: 100%;
+    }
+  }
+  ul li a {
+    font-size: 1em;
+    padding: 0.6rem 0;
+    padding-right: 1.6rem;
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
 }
