@@ -1,22 +1,10 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <nav
-      style="
-        --bs-breadcrumb-divider: url(
-          &#34;data:image/svg + xml,
-          %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='%236c757d'/%3E%3C/svg%3E&#34;
-        );
-      "
-      aria-label="breadcrumb"
-    >
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">الهيكل التنظيمي</a></li>
-        <li class="breadcrumb-item"><a href="#">العقود</a></li>
-        <li class="breadcrumb-item active" aria-current="page">
-          العقود المحولة
-        </li>
-      </ol>
-    </nav>
+  <div class="nav-container">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">الهيكل التنظيمي</a></li>
+      <li class="breadcrumb-item"><a href="#">العقود</a></li>
+      <li class="breadcrumb-item active">العقود المحولة</li>
+    </ol>
     <button
       class="navbar-toggler"
       type="button"
@@ -29,16 +17,31 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul
-        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-        style="--bs-scroll-height: 100px"
-      >
+      <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle no-arrow"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="welcome-message"><i data-lucide="bell"></i></div>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle no-arrow"

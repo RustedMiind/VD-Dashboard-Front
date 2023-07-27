@@ -18,6 +18,11 @@ html {
   &.btn-secondary {
     color: var(--font-light);
   }
+  &.btn-primary.light {
+    background-color: var(--main-light);
+    color: var(--main);
+    border-color: transparent !important;
+  }
 }
 .table {
   background-color: transparent !important;
@@ -26,7 +31,8 @@ html {
 .form-select {
   border-radius: 0.6rem;
   border: 0.1rem solid var(--main);
-  &.error {
+  &.error,
+  &.is-invalid {
     border-color: var(--red);
   }
 }
@@ -37,14 +43,16 @@ html {
   padding: 0 0.6rem;
   line-height: 1em;
 }
-.error {
+.error,
+.is-invalid {
   .message {
     display: block;
   }
 }
 .form-group,
 .form-select {
-  &.error {
+  &.error,
+  &.is-invalid {
     label,
     .message {
       color: var(--red);

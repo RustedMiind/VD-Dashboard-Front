@@ -1,0 +1,209 @@
+<div class="section my-2">
+  <h2>Inputs</h2>
+  <h6></h6>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Element</th>
+        <th scope="col">Class name</th>
+        <th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input placeholder="Primary" class="form-control" />
+        </td>
+        <td>form-control</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="usr">Label</label>
+            <input
+              type="text"
+              class="form-control"
+              id="usr"
+              placeholder="Primary"
+            />
+          </div>
+        </td>
+        <td>
+          parent: form-group<br />
+          input: form-control
+        </td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="usr">Label</label>
+            <select type="text" class="form-select" id="usr">
+              <option value="">option 1</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          parent: form-group<br />
+          select: form-control
+        </td>
+        <td>select</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="usr">Date Picker</label>
+            <input type="date" class="form-control" />
+          </div>
+        </td>
+        <td>
+          parent: form-group<br />
+          input: form-control
+        </td>
+        <td>input[type="date"]</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="usr">Label</label>
+            <select type="text" class="form-control error" id="usr">
+              <option value="">option 1</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          parent: form-group<br />
+          select or input: form-control error
+        </td>
+        <td>select & input</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group error">
+            <label for="usr">Label</label>
+            <select type="text" class="form-control" id="usr">
+              <option value="">option 1</option>
+            </select>
+            <div class="message">Error Message</div>
+          </div>
+        </td>
+        <td>
+          parent: form-group error<br />
+          select or input: form-control
+        </td>
+        <td>select & input</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >Default switch checkbox input</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexSwitchCheckChecked"
+              >Checked switch checkbox input</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDisabled"
+              disabled
+            />
+            <label class="form-check-label" for="flexSwitchCheckDisabled"
+              >Disabled switch checkbox input</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckCheckedDisabled"
+              checked
+              disabled
+            />
+            <label class="form-check-label" for="flexSwitchCheckCheckedDisabled"
+              >Disabled checked switch checkbox input</label
+            >
+          </div>
+        </td>
+        <td>
+          form-check-input <br />
+          add attribute checked if you want it checked by default <br />
+          add attribute disabled if you want it disabled by default <br />
+        </td>
+        <td>select & input</td>
+      </tr>
+      <tr>
+        <td>
+          <label class="select-image">
+            <div class="file-info-card d-none">
+              <div class="file-extension">ext</div>
+              <div class="file-name-and-size">
+                <h5>name.ext</h5>
+                <p>Size MB</p>
+              </div>
+              <div>
+                <span class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check-lg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="to-hide">
+              <p>ارفاق صورة</p>
+              <span>حجم الصورة لا يزيد عن 10MB</span>
+              <span class="icon icon-add">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                  />
+                </svg>
+              </span>
+              <input type="file" class="image-upload" style="display: none" />
+            </div>
+          </label>
+        </td>
+        <script src="assets/js/inputFile.js"></script>
+      </tr>
+    </tbody>
+  </table>
+</div>

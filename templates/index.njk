@@ -1,6 +1,6 @@
 {% extends "templates/layout/app.html" %} {% block content %}
 
-<main class="main-view">
+<main class="main-view ltr">
   <div class="section my-2">
     <h2>Layout</h2>
     <h6>Follow The structure found in the image below</h6>
@@ -8,18 +8,9 @@
       <img src="assets/code-images/layout.png" width="600px" alt="" srcset="" />
     </div>
   </div>
-  <div class="section my-2">
-    <h2>Navbar</h2>
-    <h6>Follow The structure found in the image below</h6>
-    <div>
-      <img
-        src="assets/code-images/navbar-png.png"
-        width="900px"
-        alt=""
-        srcset=""
-      />
-    </div>
-  </div>
+  {% include "templates/components/documentation/navbar.njk" %} {% include
+  "templates/components/documentation/table.njk" %} {% include
+  "templates/components/documentation/status.njk" %}
   <div class="section my-2">
     <h2>Buttons</h2>
     <h6>Works on buttons, anchors and input[type="button"]</h6>
@@ -36,6 +27,16 @@
             <input type="button" value="Primary" class="btn btn-primary" />
           </td>
           <td>btn btn-primary</td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value="Primary"
+              class="btn btn-primary light"
+            />
+          </td>
+          <td>btn btn-primary light</td>
         </tr>
         <tr>
           <td>
@@ -57,167 +58,45 @@
           </td>
           <td>btn btn-success</td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="section my-2">
-    <h2>Inputs</h2>
-    <h6></h6>
-    <table class="table table-borderless">
-      <thead>
-        <tr>
-          <th scope="col">Element</th>
-          <th scope="col">Class name</th>
-          <th scope="col">Type</th>
-        </tr>
-      </thead>
-      <tbody>
         <tr>
           <td>
-            <input placeholder="Primary" class="form-control" />
+            <button type="button" class="btn btn-outline-primary">
+              Primary
+            </button>
           </td>
-          <td>form-control</td>
-          <td>text</td>
+          <td>btn btn-outline-primary</td>
         </tr>
         <tr>
           <td>
-            <div class="form-group">
-              <label for="usr">Label</label>
-              <input
-                type="text"
-                class="form-control"
-                id="usr"
-                placeholder="Primary"
-              />
-            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              secondary
+            </button>
           </td>
-          <td>
-            parent: form-group<br />
-            input: form-control
-          </td>
-          <td>text</td>
+          <td>btn btn-outline-secondary</td>
         </tr>
         <tr>
           <td>
-            <div class="form-group">
-              <label for="usr">Label</label>
-              <select type="text" class="form-select" id="usr">
-                <option value="">option 1</option>
-              </select>
-            </div>
+            <button type="button" class="btn btn-outline-danger">danger</button>
           </td>
-          <td>
-            parent: form-group<br />
-            select: form-control
-          </td>
-          <td>select</td>
+          <td>btn btn-outline-danger</td>
         </tr>
         <tr>
           <td>
-            <div class="form-group">
-              <label for="usr">Label</label>
-              <select type="text" class="form-control error" id="usr">
-                <option value="">option 1</option>
-              </select>
-            </div>
+            <button type="button" class="btn btn-outline-success">
+              success
+            </button>
           </td>
-          <td>
-            parent: form-group<br />
-            select or input: form-control error
-          </td>
-          <td>select & input</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="form-group error">
-              <label for="usr">Label</label>
-              <select type="text" class="form-control" id="usr">
-                <option value="">option 1</option>
-              </select>
-              <div class="message">Error Message</div>
-            </div>
-          </td>
-          <td>
-            parent: form-group error<br />
-            select or input: form-control
-          </td>
-          <td>select & input</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label class="form-check-label" for="flexSwitchCheckDefault"
-                >Default switch checkbox input</label
-              >
-            </div>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckChecked"
-                checked
-              />
-              <label class="form-check-label" for="flexSwitchCheckChecked"
-                >Checked switch checkbox input</label
-              >
-            </div>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDisabled"
-                disabled
-              />
-              <label class="form-check-label" for="flexSwitchCheckDisabled"
-                >Disabled switch checkbox input</label
-              >
-            </div>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckCheckedDisabled"
-                checked
-                disabled
-              />
-              <label
-                class="form-check-label"
-                for="flexSwitchCheckCheckedDisabled"
-                >Disabled checked switch checkbox input</label
-              >
-            </div>
-          </td>
-          <td>
-            form-check-input <br />
-            add attribute checked if you want it checked by default <br />
-            add attribute disabled if you want it disabled by default <br />
-          </td>
-          <td>select & input</td>
+          <td>btn btn-outline-success</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <div class="section my-2">
-    <h2>Icons</h2>
-    <div>
-      <a
-        href="https://lucide.dev/icons/"
-        target="_blank"
-        class="btn btn-primary"
-        >lucide.dev</a
-      >
-    </div>
-  </div>
+  {% include "templates/components/documentation/inputs.njk" %} {% include
+  "templates/components/documentation/nav-tabs.njk" %}{% include
+  "templates/components/documentation/sizing.njk" %}{% include
+  "templates/components/documentation/navigator.njk" %}{% include
+  "templates/components/documentation/create-user.njk" %}
 </main>
 
 {% endblock %}

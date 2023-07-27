@@ -2,6 +2,13 @@
   display: none;
 }
 
+.ltr {
+  direction: ltr;
+}
+.rtl {
+  direction: rtl;
+}
+
 $border-radius: 0.8em;
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -31,6 +38,18 @@ input.main-input {
   color: #004693;
   padding: 0.8em 1em;
   border-radius: 0.6em;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  cursor: pointer;
+  display: block;
+  background: url(assets/images/calender-icon.png) no-repeat;
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  border-width: thin;
 }
 
 // The main blue btn

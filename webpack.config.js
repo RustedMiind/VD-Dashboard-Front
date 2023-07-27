@@ -22,6 +22,8 @@ module.exports = (env) => {
       index: "./src/ts/index.ts",
       adminLoginEmail: "./ts/adminLogin.ts",
       adminLoginOtp: "./ts/adminLogin-otp.ts",
+      inputFile: "./ts/input-file.ts",
+      createUserImage: "./ts/create-user-image.ts",
     },
     output: {
       path: path.join(__dirname, "dist"),
@@ -36,7 +38,7 @@ module.exports = (env) => {
             MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
-              options: { sourceMap: true /* url: true */ },
+              options: { sourceMap: true, url: false },
             },
             { loader: "postcss-loader", options: { sourceMap: true } },
             { loader: "resolve-url-loader" },

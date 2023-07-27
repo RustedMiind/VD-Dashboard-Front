@@ -1,24 +1,27 @@
 @import "bootstrap/scss/mixins";
 @import "./layout";
-@import "./components/navbar";
-@import "./components/table";
-@import "./components/sidebar";
+@import "./components/include";
 @import "./default.scss";
 @import "./pages/pages";
 @import "./fonts/fonts.scss";
 
 :root {
   --main: #004693;
+  --main-bg: #f3f5f7;
   --main-transparent: #00469333;
   --main-background: #f3f5f7;
+  --main-light: #d0dce9;
   --main-bg-transparent: #f2f5f74d;
   --dark-bg-transparent: #00234733;
   --sec: #f19b02;
+  --sec-bg: #fdf0d9;
   --font-light: white;
   --gray: #a7a7a7;
   --light-bg: #f3f5f7;
   --red: #cb1818;
+  --red-bg: #eed4d4;
   --green: #18cb5f;
+  --green-bg: #d4eede;
 }
 
 * {
@@ -42,9 +45,24 @@ a {
   padding: 1.6rem;
   border-radius: 1rem;
   background-color: var(--main-background);
-  &.gray {
+  &.gray,
+  &.grey {
     background-color: var(--main-background);
   }
+  &.white {
+    background-color: white;
+  }
+}
+.text-gray,
+.text-grey {
+  color: var(--gray);
+}
+
+.mh-40 {
+  min-height: 40vh;
+}
+.mh-80 {
+  min-height: 80vh;
 }
 
 .hidden-input {
@@ -54,4 +72,35 @@ a {
   pointer-events: none;
   width: 0;
   height: 0;
+}
+
+.status {
+  display: inline-block;
+  // margin: 0.4rem;
+  padding: 0.2em 1rem;
+  text-align: center;
+  background-color: var(--main-bg);
+  color: var(--main);
+  border: 0.15rem solid var(--main);
+  border-radius: 0.6rem;
+  &.active {
+    color: var(--green);
+    border-color: var(--green);
+    background-color: var(--green-bg);
+  }
+  &.stopped {
+    color: var(--red);
+    border-color: var(--red);
+    background-color: var(--red-bg);
+  }
+  &.ended {
+    color: var(--main);
+    border-color: var(--main);
+    background-color: var(--main-bg);
+  }
+  &.late {
+    color: var(--sec);
+    border-color: var(--sec);
+    background-color: var(--sec-bg);
+  }
 }

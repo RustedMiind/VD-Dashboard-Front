@@ -1,0 +1,46 @@
+.nav-tabs {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  margin-bottom: 0.1rem;
+  border: none;
+  a {
+    display: block;
+    padding: 0.4rem 1.6rem;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    margin-inline-start: 0.4rem;
+    border: none;
+    color: var(--gray);
+    transition: 200ms ease-in-out;
+    &:hover {
+      background-color: var(--main-background);
+    }
+    &.active {
+      color: var(--main);
+      background-color: var(--main-background);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      pointer-events: none;
+    }
+  }
+  @for $i from 1 through 4 {
+    $width: 4+ ($i - 1) * 4;
+    &.max-w-#{$i} {
+      a {
+        max-width: #{$width}rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        text-align: center;
+      }
+    }
+    &.static-#{$i} {
+      a {
+        width: #{$width}rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        text-align: center;
+      }
+    }
+  }
+}

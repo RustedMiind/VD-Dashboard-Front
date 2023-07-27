@@ -1,0 +1,77 @@
+.select-image {
+  height: 60px;
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px dashed var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--gray);
+  min-width: 20rem;
+  position: relative;
+  cursor: pointer;
+  span {
+    font-size: 0.8em;
+  }
+  * {
+    margin: 0;
+  }
+  .icon {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    color: var(--green);
+    svg {
+      width: 95%;
+      height: 95%;
+      object-fit: contain;
+    }
+  }
+  .icon-add {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: var(--main);
+  }
+  .file-info-card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    h5 {
+      color: var(--main);
+      font-size: 1rem;
+      margin: 0;
+    }
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    .file-name-and-size {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      overflow: hidden;
+      max-width: 70%;
+    }
+    .file-extension {
+      background-color: var(--main-light);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+  }
+}
