@@ -1,4 +1,29 @@
-.create-user {
-  &.user-image {
+.user-image-upload {
+  &,
+  .create-user-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .user-image {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 1000rem;
+    outline: 0.2rem solid var(--main);
+    background-color: white;
+  }
+  a {
+    cursor: pointer;
+    &:hover {
+      color: var(--gray) !important;
+    }
+  }
+}
+.success {
+  // color: var(--green);
+  .user-image {
+    // outline-color: var(--green) !important;
   }
 }

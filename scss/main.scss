@@ -74,6 +74,35 @@ a {
   height: 0;
 }
 
+.icon-with-value {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  font-style: normal;
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+  }
+  .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    background-color: var(--red);
+    color: var(--font-light);
+    line-height: 0;
+    overflow: hidden;
+    top: -0.4em;
+    right: -0.4em;
+    font-size: 0.6em;
+    border-radius: 100rem;
+  }
+}
+
 .status {
   display: inline-block;
   // margin: 0.4rem;
