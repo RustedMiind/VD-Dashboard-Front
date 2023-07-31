@@ -1,0 +1,93 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+<main class="main-view">
+  <form class="row mb-4">
+    <div class="col-6">
+      <input type="text" placeholder="اسم المشروع" class="form-control" />
+    </div>
+    <div class="col-6">
+      <input type="text" placeholder="اسم المسؤول" class="form-control" />
+    </div>
+  </form>
+  <div class="two-rows-container">
+    <div class="side-container">
+      <h4 class="title">المهام</h4>
+      <div class="table-container">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in range(0, 300) -%}
+
+            <tr>
+              <td>{{ i * 1000 }}</td>
+              <td>25/10/2020</td>
+              <td>احمد محمد</td>
+              <td>رخصة بناء</td>
+              <td>انشاء سجل عقاري</td>
+              <td>اعداد معاملة</td>
+              <td>icon</td>
+            </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="side-container">
+      <h4 class="title">المهام</h4>
+      <div class="table-container">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+              <th>رقم المشروع</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in range(0, 300) -%}
+
+            <tr>
+              <td>{{ i * 1000 }}</td>
+              <td>25/10/2020</td>
+              <td>احمد محمد</td>
+              <td>رخصة بناء</td>
+              <td>انشاء سجل عقاري</td>
+              <td>اعداد معاملة</td>
+              <td>icon</td>
+            </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="progress-bar-section">
+    <h4>عدد المشاريع المطلوبة</h4>
+    <div class="progress-bar-container">
+      <div class="bar" id="porjectsBar">
+        <div class="outer-bar-value" id="outerBarValue" value="2">0</div>
+        <div class="inner-bar" value="8">0</div>
+      </div>
+      <div class="titles">
+        <p>عدد المشاريع المنجزة</p>
+        <p>عدد المشاريع المطلوبة</p>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/handleValueBar.js"></script>
+{% endblock %}

@@ -7,8 +7,16 @@ nav.navbar {
   padding: 1rem;
   background-color: white;
   color: inherit;
+  .navbar-toggler:focus {
+    box-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.425);
+  }
   a {
-    display: inline;
+    display: inline-block;
+  }
+  .nav-item.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navbar-collapse {
     flex-basis: unset;
@@ -77,8 +85,39 @@ nav.navbar {
     }
   }
   @media (max-width: 992px) {
-    // width: 100vw;
-    // right: 0;
+    .navbar-collapse {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: 300ms;
+      background-color: white;
+      &.showing {
+        opacity: 1;
+      }
+      &.show {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .navbar-nav {
+        overflow: visible !important;
+        .nav-item {
+          position: relative;
+          text-align: center;
+          padding: 0.8rem 0;
+          font-size: 1.2rem;
+        }
+        .dropdown-menu {
+          position: absolute;
+          top: 100%;
+          z-index: 1000;
+        }
+      }
+    }
   }
 }
 

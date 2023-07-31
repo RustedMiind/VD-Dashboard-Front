@@ -1,3 +1,10 @@
+const projectsPages = [
+  {
+    from: "templates/projects/projects.njk",
+    to: "projects-index.html",
+  },
+];
+
 module.exports = [
   {
     from: "templates/index.njk",
@@ -11,4 +18,5 @@ module.exports = [
     from: "templates/adminlogin2.njk",
     to: "adminlogin2.html",
   },
+  ...projectsPages,
 ];

@@ -24,6 +24,7 @@ module.exports = (env) => {
       adminLoginOtp: "./ts/adminLogin-otp.ts",
       inputFile: "./ts/input-file.ts",
       createUserImage: "./ts/create-user-image.ts",
+      handleValueBar: "./ts/handle-value-bar.ts",
     },
     output: {
       path: path.join(__dirname, "dist"),
@@ -41,7 +42,7 @@ module.exports = (env) => {
               options: { sourceMap: true, url: false },
             },
             { loader: "postcss-loader", options: { sourceMap: true } },
-            { loader: "resolve-url-loader" },
+            // { loader: "resolve-url-loader" },
             { loader: "sass-loader", options: { sourceMap: true } },
           ],
         },

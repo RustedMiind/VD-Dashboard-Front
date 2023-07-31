@@ -2,7 +2,7 @@
 
 <main class="main-view ltr">
   <div class="section my-2">
-    <h2>Layout</h2>
+    <h2><i class="bx bxs-user"></i>Layout</h2>
     <h6>Follow The structure found in the image below</h6>
     <div>
       <img src="assets/code-images/layout.png" width="600px" alt="" srcset="" />
@@ -13,6 +13,7 @@
   "templates/components/documentation/status.njk" %}
   <div class="section my-2">
     <h2>Buttons</h2>
+    <i class="isax isax-bookmark"></i>
     <h6>Works on buttons, anchors and input[type="button"]</h6>
     <table class="table table-borderless">
       <thead>
@@ -91,12 +92,22 @@
       </tbody>
     </table>
   </div>
+  <div class="section">
+    <h2>Icons</h2>
+    <p>i.bx.bx-{icon name}</p>
+    <h3>
+      <a href="https://boxicons.com/" class="btn btn-success" target="_blank"
+        >Select Icon</a
+      >
+    </h3>
+  </div>
 
   {% include "templates/components/documentation/inputs.njk" %} {% include
   "templates/components/documentation/nav-tabs.njk" %}{% include
   "templates/components/documentation/sizing.njk" %}{% include
   "templates/components/documentation/navigator.njk" %}{% include
-  "templates/components/documentation/create-user.njk" %}
+  "templates/components/documentation/create-user.njk" %}{% include
+  "templates/components/employee-from.njk" %}
 </main>
 
 {% endblock %}

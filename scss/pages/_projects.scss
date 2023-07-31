@@ -1,0 +1,97 @@
+.two-rows-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem;
+  .title {
+    width: 100%;
+    background-color: var(--main);
+    color: var(--font-light);
+    padding: 1rem;
+    text-align: center;
+    border-radius: inherit;
+  }
+  .side-container {
+    background-color: var(--main-transparent);
+    padding: 0;
+    border-radius: 0.8rem;
+    width: calc(50% - 0.6rem);
+    overflow: hidden;
+    @media (max-width: 1600px) {
+      width: 100%;
+    }
+    .table-container {
+      padding: 0.6rem;
+      margin: 0.6rem 0;
+      max-height: calc(100vh - 25rem);
+      overflow-y: scroll;
+      @media (max-height: 800px) {
+        max-height: calc(30rem);
+      }
+      @media (max-width: 1600px) {
+        max-height: 20rem;
+      }
+    }
+  }
+}
+
+.progress-bar-section {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f5f7;
+  border-radius: 1rem;
+  .progress-bar-container {
+    width: 65%;
+    justify-content: space-between;
+    .bar {
+      border-radius: 10rem;
+      overflow: hidden;
+      height: 1.6rem;
+      padding: 0.2rem;
+      position: relative;
+      display: flex;
+      // flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fdf0d9;
+      .outer-bar-value {
+        left: 0;
+        position: absolute;
+        padding: 0 0.8rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .inner-bar {
+        display: flex;
+        align-items: center;
+        transition: 1200ms ease-in-out;
+        padding: 0 0.4rem;
+        border-radius: inherit;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(
+          270.02deg,
+          #f19b02 0.02%,
+          rgba(248, 172, 38, 0.31) 101.18%
+        );
+        // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 2px 4px #ffe1ab;
+        // background-image: url("/dist/assets/images/images.jpg");
+        background-size: contain;
+        background-position: center;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+    .titles {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

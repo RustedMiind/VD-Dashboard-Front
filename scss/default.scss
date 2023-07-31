@@ -329,3 +329,15 @@ form .input-section {
     }
   }
 }
+
+@for $i from 1 through 6 {
+  .gap-#{$i} {
+    $gap: $i * 0.3;
+
+    gap: #{$gap}rem;
+
+    > * {
+      gap: #{$gap}rem;
+    }
+  }
+}
