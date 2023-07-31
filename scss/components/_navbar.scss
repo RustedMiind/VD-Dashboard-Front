@@ -89,12 +89,14 @@ nav.navbar {
       position: absolute;
       width: 100%;
       top: 100%;
+      left: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       opacity: 0;
       pointer-events: none;
       transition: 300ms;
+
       background-color: white;
       &.showing {
         opacity: 1;

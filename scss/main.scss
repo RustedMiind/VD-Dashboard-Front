@@ -54,6 +54,12 @@ a {
     background-color: white;
   }
 }
+
+.bx {
+  position: relative;
+
+  top: 0.07em;
+}
 .text-gray,
 .text-grey {
   color: var(--gray);
@@ -132,5 +138,30 @@ a {
     color: var(--sec);
     border-color: var(--sec);
     background-color: var(--sec-bg);
+  }
+}
+
+// test
+
+.log-button {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 200000;
+}
+
+.log-container {
+  position: absolute;
+  left: -100%;
+  transition: 500ms ease-in-out;
+  top: 5rem;
+  z-index: 100000;
+  width: 50vw;
+  height: 70vh;
+  background-color: rgb(255, 255, 255, 0.9);
+  overflow: scroll;
+  overflow-x: hidden;
+  &.show {
+    left: 5rem;
   }
 }

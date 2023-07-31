@@ -1,0 +1,38 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+
+<main class="main-view ltr">
+  {% include "templates/components/employee-from.njk" %}
+  <div class="log-button" onclick="toggleLog()">
+    <button class="btn btn-danger">Audit Log</button>
+  </div>
+  <div class="log-container" id="logContainer">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th>Hello Table</th>
+          <th>Remove Table</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(0, 100) -%}
+
+        <tr>
+          <td>Some Content</td>
+          <td>Some Content</td>
+        </tr>
+
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<script>
+  function toggleLog() {
+    const container = document.getElementById("logContainer");
+    if (container.classList.contains("show"))
+      container.classList.remove("show");
+    else container.classList.add("show");
+  }
+</script>
+{% endblock %}

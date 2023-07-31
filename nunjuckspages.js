@@ -3,6 +3,10 @@ const projectsPages = [
     from: "templates/projects/projects.njk",
     to: "projects-index.html",
   },
+  {
+    from: "templates/test.njk",
+    to: "test.html",
+  },
 ];
 
 module.exports = [

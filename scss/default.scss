@@ -341,3 +341,17 @@ form .input-section {
     }
   }
 }
+
+@for $i from 1 through 6 {
+  .flex-grow-#{$i} {
+    flex: 1 0 0%;
+    flex-grow: $i;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
