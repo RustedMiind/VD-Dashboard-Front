@@ -12,6 +12,10 @@
   scrollbar-width: none;
   color: var(--font-light);
 
+  .collapse,
+  .collapsing {
+    padding-inline-start: 1.6rem;
+  }
   .logo-container {
     width: 100%;
     display: flex;
@@ -28,6 +32,10 @@
     width: 100%;
     text-align: right;
     position: relative;
+    &:active {
+      border: none;
+    }
+    border: none !important;
     span {
       display: block;
       transition: 500ms;
@@ -35,12 +43,16 @@
       // transform: translateX(50%);
       width: fit-content;
     }
-    svg {
+    .bx-chevron-left {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: 400ms;
       position: absolute;
       left: 0;
       // opacity: 0;
-      transform: rotate(180deg);
+      transform: rotate(-90deg);
     }
 
     &.collapsed {
@@ -49,7 +61,7 @@
         transform: translateX(0);
         margin-right: 0;
       }
-      svg {
+      .bx-chevron-left {
         // opacity: 1;
         transform: rotate(0deg);
       }

@@ -34,5 +34,26 @@
       container.classList.remove("show");
     else container.classList.add("show");
   }
+  toastr.options.onShown = function () {
+    console.log("hello");
+  };
+  toastr.options.onHidden = function () {
+    console.log("goodbye");
+  };
+  toastr.options.onclick = function () {
+    console.log("clicked");
+  };
+  toastr.options.onCloseClick = function () {
+    console.log("close button clicked");
+  };
+  toastr.options.showDuration = 200;
+  toastr.options.timeOut = 100000;
+  toastr.options.extendedTimeOut = 100000;
+  setTimeout(() => {
+    toastr.success(
+      "My name is Inigo Montoya. You killed my father, prepare to die!",
+      "title"
+    );
+  }, 1000);
 </script>
 {% endblock %}

@@ -165,3 +165,48 @@ a {
     left: 5rem;
   }
 }
+
+// toastr
+
+#toast-container > .toast {
+  opacity: 1;
+  color: var(--main);
+  --bs-toast-bg: var(--font-light);
+  // overflow: visible;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--main);
+    border-radius: inherit;
+  }
+  &.toast-success {
+    &::before {
+      background-color: var(--green);
+    }
+  }
+  &.toast-warning {
+    &::before {
+      background-color: var(--sec);
+    }
+  }
+  &.toast-error {
+    &::before {
+      background-color: var(--red);
+    }
+  }
+}
+.toast {
+  // &.toast-success {
+  //   --bs-toast-bg: var(--green);
+  // }
+  // &.toast-warning {
+  //   --bs-toast-bg: var(--sec);
+  // }
+  // &.toast-error {
+  //   --bs-toast-bg: var(--red);
+  // }
+}
