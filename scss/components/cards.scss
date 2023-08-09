@@ -1,0 +1,95 @@
+.custom-projects-card {
+  width: 20rem;
+  overflow: hidden;
+  background-color: var(--main);
+  color: var(--font-light);
+  border-radius: 0.6rem;
+  display: inline-block;
+  .image-container {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--main);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .dropstart,
+    .dropend,
+    .dropdown {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    .data {
+      width: 80%;
+    }
+    .setting {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.notification-lg-card {
+  background-color: var(--main-light);
+  width: 100%;
+  position: relative;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  opacity: 0.6;
+  display: block;
+  //   color: var(--gray);
+  &::before {
+    // opacity: 0.2;
+    content: "";
+    position: absolute;
+    width: 0.6rem;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: var(--sec);
+    background: #f5e5ce;
+  }
+  .name-date-container {
+    display: flex;
+    justify-content: space-between;
+    .name {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .date {
+      color: var(--gray);
+    }
+  }
+  .content {
+  }
+  &.new {
+    opacity: 1;
+    color: var(--main);
+    .content {
+      font-weight: 900;
+      opacity: 1;
+      color: var(--main);
+    }
+    &::before {
+      opacity: 1;
+      background-color: var(--sec);
+    }
+    .name {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+}

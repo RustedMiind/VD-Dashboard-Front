@@ -39,7 +39,8 @@
     font-size: 1.6rem;
     color: var(--main);
   }
-  .file-info-card {
+  .file-info-card,
+  .file-info-card-no-action {
     display: flex;
     width: 100%;
     align-items: center;
@@ -73,27 +74,91 @@
       justify-content: center;
       text-transform: uppercase;
       position: relative;
-      &::after {
-        content: "";
-        position: absolute;
+      overflow: hidden;
+      img {
         width: 100%;
         height: 100%;
-        border-radius: 50rem;
-        border: 0.3rem solid red;
-        border-bottom-color: transparent;
-        top: 0;
-        left: 0;
-        animation-name: loading-border;
-        animation-duration: 1200ms;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
+        object-fit: cover;
       }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   border-radius: 50rem;
+      //   border: 0.3rem solid red;
+      //   border-bottom-color: transparent;
+      //   top: 0;
+      //   left: 0;
+      //   animation-name: loading-border;
+      //   animation-duration: 1200ms;
+      //   animation-timing-function: ease-in-out;
+      //   animation-iteration-count: infinite;
+      // }
     }
   }
   &.loading {
   }
 }
 
+.color-picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray);
+}
+
+input[type="color"] {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  // border-width: 2px;
+  outline-width: 2px;
+}
+
+.settings-button {
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  border-radius: 100rem !important;
+  background-color: transparent;
+  color: inherit;
+  transition: 200ms ease-in-out;
+  &:hover {
+    color: var(--font-light);
+    text-shadow: 0 0 0.4rem var(--main);
+  }
+}
+
+.status-dropdown {
+  min-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  &.show {
+    display: flex;
+  }
+}
+
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  direction: rtl;
+  .bx {
+    transition: 200ms ease-in;
+    transform: rotate(-90deg);
+  }
+  &.collapsed {
+    .bx {
+      transform: rotate(0deg);
+    }
+  }
+}
 @keyframes loading-border {
   0% {
     transform: rotate(0deg);

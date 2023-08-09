@@ -11,7 +11,7 @@
   overflow-y: inherit;
   scrollbar-width: none;
   color: var(--font-light);
-
+  transition: 400ms;
   .collapse,
   .collapsing {
     padding-inline-start: 1.6rem;
@@ -19,9 +19,11 @@
   .logo-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
+    gap: 0.8rem;
     img {
       width: 5rem;
     }
@@ -91,5 +93,21 @@
   }
   ul li > a {
     padding: 0.6rem 0;
+  }
+  @media (max-width: 1024px) {
+    overflow: hidden;
+    position: fixed;
+    left: 100%;
+    width: 100vw;
+    pointer-events: none;
+    &.show {
+      pointer-events: all;
+      left: 0;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 0rem;
   }
 }

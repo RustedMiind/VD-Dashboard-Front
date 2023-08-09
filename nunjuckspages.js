@@ -7,6 +7,14 @@ const projectsPages = [
     from: "templates/test.njk",
     to: "test.html",
   },
+  {
+    from: "templates/projects/project.njk",
+    to: "project.html",
+  },
+  {
+    from: "templates/projects/chat-page.njk",
+    to: "project-chat-page.html",
+  },
 ];
 
 module.exports = [
@@ -15,12 +23,20 @@ module.exports = [
     to: "index.html",
   },
   {
+    from: "templates/modals.njk",
+    to: "modals.html",
+  },
+  {
     from: "templates/adminlogin1.njk",
     to: "adminlogin1.html",
   },
   {
     from: "templates/adminlogin2.njk",
     to: "adminlogin2.html",
+  },
+  {
+    from: "templates/notifications.njk",
+    to: "notifications.html",
   },
   ...projectsPages,
 ];

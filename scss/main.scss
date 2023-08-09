@@ -57,8 +57,9 @@ a {
 
 .bx {
   position: relative;
-
-  top: 0.07em;
+  // top: 0.07em;
+  vertical-align: middle;
+  text-align: center;
 }
 .text-gray,
 .text-grey {

@@ -23,7 +23,8 @@
     text-align: start;
     th {
       text-align: center;
-      background-color: var(--main-transparent);
+      background-color: var(--main);
+      color: var(--font-light);
     }
     th,
     td {
@@ -31,13 +32,13 @@
       // border-radius: 0.6rem;
       // padding: 1rem;
       &.red {
-        background-color: var(--main-transparent);
+        background-color: var(--main);
       }
       &.green {
-        background-color: #c3d59b;
+        background-color: var(--main);
       }
       &.violet {
-        background-color: #cbc0d9;
+        background-color: var(--main);
       }
     }
   }

@@ -152,10 +152,94 @@
         </td>
         <td>select & input</td>
       </tr>
+      <tr>
+        <td>
+          <div class="form-outline">
+            <textarea
+              class="form-control"
+              id="textAreaExample3"
+              rows="4"
+            ></textarea>
+            <label class="form-label" for="textAreaExample3">Message</label>
+          </div>
+        </td>
+        <td></td>
+        <td>textarea</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-control color-picker">
+            <input type="color" class="w-4 h-4" />
+            <div>HEX Code</div>
+          </div>
+        </td>
+
+        <td>
+          Container: .form-container<br />
+          Child: input[type="color"] & div{content"HEX Code"}
+        </td>
+        <td>colorpicker</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="dropdown">
+            <button
+              type="button"
+              class="btn status active"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Active
+            </button>
+            <ul class="dropdown-menu status-dropdown p-2">
+              <!-- Dropdown menu links -->
+              <li>
+                <button
+                  type="button"
+                  class="btn status stopped"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Failed
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn status late"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Success
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn status ended"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Success
+                </button>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          Container : .dropdown <br />
+          Childs : Button <br />
+          type="button" class="btn status active" data-bs-toggle="dropdown"
+          aria-expanded="false" <br />
+          Dropdown Menu ul <br />
+          class="dropdown-menu status-dropdown p-2"
+        </td>
+        <td></td>
+      </tr>
 
       <tr>
         <td>
-          <label class="select-image loading">
+          <label class="select-image">
             <div class="file-info-card d-none">
               <div class="pie-wrapper progress-38 style-2">
                 <span class="label">PDF</span>
@@ -204,6 +288,51 @@
                   <path
                     d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
                   />
+                </svg>
+              </span>
+              <input type="file" class="image-upload" style="display: none" />
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="select-image">
+            <div class="file-info-card-no-action">
+              <div class="file-extension">
+                <img
+                  src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="file-name-and-size">
+                <h5>File.name</h5>
+                <p>file.size</p>
+              </div>
+              <div>
+                <a href="https://ksdfhjgsdf.com" class="icon">
+                  <i class="bx bx-download bx-sm"></i>
+                </a>
+              </div>
+            </div>
+            <div class="to-hide d-none">
+              <p>ارفاق صورة</p>
+              <span>حجم الصورة لا يزيد عن 10MB</span>
+              <span class="icon icon-add">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  ></path>
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                  ></path>
                 </svg>
               </span>
               <input type="file" class="image-upload" style="display: none" />

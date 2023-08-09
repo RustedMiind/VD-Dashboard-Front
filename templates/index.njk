@@ -92,6 +92,99 @@
           </td>
           <td>btn btn-outline-success</td>
         </tr>
+        <tr>
+          <div class="section">
+            <button
+              type="button"
+              class="btn btn-primary light w-100 arrow-btn collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+            >
+              Collapse Toggle
+              <i class="bx bx-sm bx-chevron-left"></i>
+            </button>
+            <div class="collapse white" id="collapseExample">
+              <div class="card card-body">
+                <p>
+                  Button Classes : btn btn-primary light w-100 arrow-btn
+                  collapsed
+                </p>
+                <p>
+                  How to use:
+                  <a
+                    href="https://getbootstrap.com/docs/5.0/components/collapse/"
+                    target="_blank"
+                    class="text-danger"
+                    >documentation</a
+                  >
+                </p>
+                <div class="section">
+                  <a
+                    href="https://getbootstrap.com/docs/5.0/components/collapse/"
+                    target="_blank"
+                    class="btn btn-primary w-100 arrow-btn collapsed my-2"
+                  >
+                    Link to documentation
+                    <i class="bx bx-sm bx-chevron-left"></i>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn-primary w-100 arrow-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample3"
+                  >
+                    Collapse Toggle
+                    <i class="bx bx-sm bx-chevron-left"></i>
+                  </button>
+                  <div class="collapse white" id="collapseExample3">
+                    <div class="card card-body">
+                      <p>
+                        Button Classes : btn btn-primary w-100 arrow-btn
+                        collapsed
+                      </p>
+                      <p>
+                        How to use:
+                        <a
+                          href="https://getbootstrap.com/docs/5.0/components/collapse/"
+                          target="_blank"
+                          class="text-danger"
+                          >documentation</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <button
+              type="button"
+              class="btn btn-primary w-100 arrow-btn collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample2"
+            >
+              Collapse Toggle
+              <i class="bx bx-sm bx-chevron-left"></i>
+            </button>
+            <div class="collapse white" id="collapseExample2">
+              <div class="card card-body">
+                <p>
+                  Button Classes : btn btn-primary w-100 arrow-btn collapsed
+                </p>
+                <p>
+                  How to use:
+                  <a
+                    href="https://getbootstrap.com/docs/5.0/components/collapse/"
+                    target="_blank"
+                    class="text-danger"
+                    >documentation</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -105,11 +198,14 @@
     </h3>
   </div>
 
-  {% include "templates/components/documentation/inputs.njk" %} {% include
+  {% include "templates/components/documentation/inputs.njk" %}{% include
+  "templates/components/documentation/text.njk" %} {% include
   "templates/components/documentation/nav-tabs.njk" %}{% include
+  "templates/components/documentation/cards.njk" %}{% include
   "templates/components/documentation/sizing.njk" %}{% include
   "templates/components/documentation/navigator.njk" %}{% include
   "templates/components/documentation/create-user.njk" %}{% include
+  "templates/components/documentation/search.njk" %}{% include
   "templates/components/employee-from.njk" %}
 </main>
 

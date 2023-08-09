@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="nav-container">
-    <ol class="breadcrumb">
+    <button class="toggleSidebar navbar-toggler d-flex d-md-none" type="button">
+      <i class="bx bx-horizontal-left"></i>
+    </button>
+    <!-- <button class="btn btn-danger toggleSidebar" id="toggleSidebar">
+      Open Sidebar
+    </button> -->
+    <ol class="breadcrumb d-none d-md-flex">
       <li class="breadcrumb-item"><a href="#">الهيكل التنظيمي</a></li>
       <li class="breadcrumb-item"><a href="#">العقود</a></li>
       <li class="breadcrumb-item active">العقود المحولة</li>
@@ -50,13 +56,88 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <div class="welcome-message"><i data-lucide="bell"></i></div>
+            <div class="welcome-message">
+              <i class="bx bx-bell"></i>
+            </div>
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu notifications-dropdown p-0">
+            <li>
+              <a class="notification-card unread" href="#">
+                <div class="content">
+                  <div class="title">Ali Soliman</div>
+                  <div class="">Ahmed Send You a friend request</div>
+                </div>
+                <div class="time">
+                  <div>2023/5</div>
+                  <div>06:30AM</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="notification-card unread" href="#">
+                <div class="content">
+                  <div class="title">Ali Soliman</div>
+                  <div class="">Ahmed Send You a friend request</div>
+                </div>
+                <div class="time">
+                  <div>2023/5</div>
+                  <div>06:30AM</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="notification-card unread" href="#">
+                <div class="content">
+                  <div class="title">Ali Soliman</div>
+                  <div class="">Ahmed Send You a friend request</div>
+                </div>
+                <div class="time">
+                  <div>2023/5</div>
+                  <div>06:30AM</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="notification-card unread" href="#">
+                <div class="content">
+                  <div class="title">Ali Soliman</div>
+                  <div class="">Ahmed Send You a friend request</div>
+                </div>
+                <div class="time">
+                  <div>2023/5</div>
+                  <div>06:30AM</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="notification-card" href="#">
+                <div class="content">
+                  <div class="title">Ali Soliman</div>
+                  <div class="">Ahmed Send You a friend request</div>
+                </div>
+                <div class="time">
+                  <div>2023/5</div>
+                  <div>06:30AM</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="notification-card unread" href="#">
+                <div class="content">
+                  <div class="title">Ali Soliman</div>
+                  <div class="">Ahmed Send You a friend request</div>
+                </div>
+                <div class="time">
+                  <div>2023/5</div>
+                  <div>06:30AM</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="show-all-notifications" href="#">
+                Show All Notifications
+              </a>
+            </li>
           </ul>
         </li>
         <li class="nav-item dropdown">

@@ -1,0 +1,130 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+<main class="main-view">
+  <section class="projects-chat-page">
+    <div class="chat-users-container">
+      <div class="search-bar">
+        <input type="text" placeholder="ادخل اسم المستخدم" />
+        <div class="search-icon">Search</div>
+      </div>
+      <div class="cards-container">
+        {% for item in range(0,10) %}
+
+        <div class="chat-card">
+          <div class="right">
+            <img
+              src="https://img.freepik.com/free-icon/user_318-159711.jpg"
+              alt=""
+            />
+          </div>
+          <div class="left">
+            <div class="head">
+              <h4>اسم المستخدم</h4>
+              <div class="time-and-active" active="active">
+                <h4>06:14pm</h4>
+              </div>
+            </div>
+            <p class="message-content">
+              هذه المساحة يمكن ان تستخدم لاضافة النصوص هذه المساحة يمكن ان
+              تستخدم لاضافة النصوص هذه
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="user-chat-container">
+      <div class="head">
+        <div class="user-info">
+          <div class="user-profile-image">
+            <img
+              src="https://img.freepik.com/free-icon/user_318-159711.jpg"
+              alt=""
+            />
+          </div>
+          <h4>اسم المستخدم</h4>
+        </div>
+        <div class="settings-icon">
+          <i class="icon-trash"></i>
+        </div>
+      </div>
+      <div class="messages-container" id="chat-cards-container">
+        <div class="message-container" by="user">
+          <div class="message-card">
+            <div class="content">
+              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا حيث يمكنك
+              أن تولد مثل هذا حيث يمكنك أن تولد مثل هذا حيث يمكنك أن تولد مثل
+              هذا
+            </div>
+            <div class="time">12:55pm</div>
+          </div>
+        </div>
+        <div class="message-container" by="other">
+          <div class="message-card">
+            <div class="content">
+              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا حيث يمكنك
+              أن تولد مثل هذا حيث يمكنك أن تولد مثل هذا حيث يمكنك أن تولد مثل
+              هذا
+            </div>
+            <div class="time">12:55pm</div>
+          </div>
+        </div>
+        <div class="message-container" by="other">
+          <div class="message-card">
+            <div class="content">
+              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا حيث يمكنك
+              أن تولد مثل هذا حيث يمكنك أن تولد مثل هذا حيث يمكنك أن تولد مثل
+              هذا
+            </div>
+            <div class="time">12:55pm</div>
+          </div>
+        </div>
+        <div class="message-container" by="other">
+          <div class="message-card">
+            <div class="content">
+              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا حيث يمكنك
+              أن تولد مثل هذا حيث يمكنك أن تولد مثل هذا حيث يمكنك أن تولد مثل
+              هذا
+            </div>
+            <div class="time">12:55pm</div>
+          </div>
+        </div>
+        <div class="message-container" by="user">
+          <div class="message-card">
+            <div class="content">
+              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا حيث يمكنك
+              أن تولد مثل هذا حيث يمكنك أن تولد مثل هذا حيث يمكنك أن تولد مثل
+              هذا
+            </div>
+            <div class="time">12:55pm</div>
+          </div>
+        </div>
+        <div class="message-container" by="user">
+          <div class="message-card">
+            <div class="content">هذا النص هو مثال لنص يمكن</div>
+            <div class="time">12:55pm</div>
+          </div>
+        </div>
+      </div>
+      <form class="send-message-container">
+        <input type="text" placeholder="Type your message here...." />
+        <div class="controls">
+          <button class="private-button">private</button>
+          <button class="public-button">public</button>
+          <button type="submit" class="send-button">
+            <i class="icon-note-text"></i>
+          </button>
+          <button class="add-file-button">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -4,6 +4,9 @@
   flex-wrap: wrap;
   margin-bottom: 0.2rem;
   border: none;
+  width: max-content;
+  // max-width: 100%;
+  overflow-x: auto;
   a {
     display: block;
     padding: 0.4rem 1.6rem;

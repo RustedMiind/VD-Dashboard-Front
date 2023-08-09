@@ -1,4 +1,10 @@
-*::-webkit-scrollbar {
+.body-container::-webkit-scrollbar,
+.main-view::-webkit-scrollbar,
+body::-webkit-scrollbar,
+html::-webkit-scrollbar,
+.table-container::-webkit-scrollbar,
+.notifications-dropdown::-webkit-scrollbar,
+.table::-webkit-scrollbar {
   display: none;
 }
 
@@ -7,6 +13,10 @@
 }
 .rtl {
   direction: rtl;
+}
+
+.scroll-x {
+  overflow-x: auto !important;
 }
 
 $border-radius: 0.8em;
@@ -38,6 +48,16 @@ input.main-input {
   color: #004693;
   padding: 0.8em 1em;
   border-radius: 0.6em;
+}
+
+.btn-100 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -189,8 +209,6 @@ form .input-section {
     > .content {
       display: none;
     }
-  }
-  .content {
   }
   .content.work-domain-container {
     display: block;
@@ -354,4 +372,11 @@ form .input-section {
   flex-direction: row !important;
   align-items: center !important;
   gap: 0.4rem;
+  i.bx {
+    // position: static !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: unset;
+  }
 }
