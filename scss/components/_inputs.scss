@@ -130,6 +130,26 @@ input[type="color"] {
   }
 }
 
+.icon-input-container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  .input-with-icon {
+    padding-right: 2.6rem;
+  }
+  .input-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
 .status-dropdown {
   min-width: fit-content;
   align-items: center;

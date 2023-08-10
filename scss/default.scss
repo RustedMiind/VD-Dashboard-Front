@@ -3,6 +3,7 @@
 body::-webkit-scrollbar,
 html::-webkit-scrollbar,
 .table-container::-webkit-scrollbar,
+.main-sidebar::-webkit-scrollbar,
 .notifications-dropdown::-webkit-scrollbar,
 .table::-webkit-scrollbar {
   display: none;
@@ -379,4 +380,11 @@ form .input-section {
     justify-content: center;
     top: unset;
   }
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
 }

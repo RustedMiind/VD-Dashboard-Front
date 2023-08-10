@@ -1,0 +1,78 @@
+.images-gallery-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  background-color: var(--main-light);
+  .images-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 6rem;
+  }
+  .gallery-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 200ms;
+    .on-hover {
+      transition: 200ms;
+      opacity: 0;
+      pointer-events: none;
+      content: "تعديل";
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 0.8rem var(--main);
+      .on-hover {
+        opacity: 1;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &.main-image {
+      width: 12.8rem;
+      height: 10rem;
+    }
+  }
+}
+
+img.user-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 100rem;
+  border: 0.3rem solid transparent;
+  &.primary {
+    border-color: var(--main);
+  }
+  &.active {
+    border-color: var(--green);
+  }
+  &.late {
+    border-color: var(--sec);
+  }
+  &.expired {
+    border-color: var(--red);
+  }
+}

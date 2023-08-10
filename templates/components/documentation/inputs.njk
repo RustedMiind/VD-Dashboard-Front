@@ -1,4 +1,4 @@
-<div class="section my-2">
+<div class="section my-2 ltr">
   <h2>Inputs</h2>
   <h6></h6>
   <table class="table table-borderless">
@@ -9,7 +9,7 @@
         <th scope="col">Type</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="text-start">
       <tr>
         <td>
           <input placeholder="Primary" class="form-control" />
@@ -32,6 +32,31 @@
         <td>
           parent: form-group<br />
           input: form-control
+        </td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="usr">Input with icon</label>
+            <div class="icon-input-container">
+              <input
+                name="email"
+                type="text"
+                class="form-control input-with-icon"
+                placeholder="البريد الالكتروني"
+              />
+              <i class="input-icon bx bx-envelope"></i>
+            </div>
+          </div>
+        </td>
+        <td>
+          As same as any input can be wrapped in form-group, The change is only
+          on the input<br />
+          The input should be wrapped with the icon in a div with the class
+          icon-input-container <br />
+          input: form-control input-with-icon<br />
+          icon: just add class input-icon to the icon element
         </td>
         <td>text</td>
       </tr>
@@ -124,6 +149,18 @@
               class="form-check-input"
               type="checkbox"
               role="switch"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexSwitchCheckChecked"
+              >Checked switch checkbox input</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
               id="flexSwitchCheckDisabled"
               disabled
             />
@@ -150,7 +187,93 @@
           add attribute checked if you want it checked by default <br />
           add attribute disabled if you want it disabled by default <br />
         </td>
-        <td>select & input</td>
+        <td>
+          input [ class="form-check-input" type="checkbox" role="switch"
+          id="flexSwitchCheckCheckedDisabled" ]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="checkbox"
+            aria-label="Checkbox for following text input"
+          />
+          <input
+            type="checkbox"
+            aria-label="Checkbox for following text input"
+            checked
+          />
+        </td>
+        <td>
+          <br />
+          add attribute checked if you want it checked by default
+          <br />
+          add attribute disabled if you want it disabled by default
+          <br />
+        </td>
+        <td>
+          input[ type="checkbox" aria-label="Checkbox for following text input"
+          ]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="radio"
+            aria-label="Radio button for following text input"
+            name="item"
+          />
+          <input
+            type="radio"
+            aria-label="Radio button for following text input"
+            name="item"
+          />
+          <input
+            type="radio"
+            aria-label="Radio button for following text input"
+            name="item"
+            checked
+          />
+          <input
+            type="radio"
+            aria-label="Radio button for following text input"
+            name="item"
+          />
+          <input
+            type="radio"
+            aria-label="Radio button for following text input"
+            name="item"
+          />
+          <input
+            type="radio"
+            aria-label="Radio button for following text input"
+            name="item"
+          />
+        </td>
+        <td>
+          add attribute checked if you want it checked by default
+          <br />
+          add attribute disabled if you want it disabled by default
+          <br />
+        </td>
+        <td>
+          input[ type="radio" aria-label="Radio button for following text input"
+          ]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-outline">
+            <textarea
+              class="form-control"
+              id="textAreaExample3"
+              rows="4"
+            ></textarea>
+            <label class="form-label" for="textAreaExample3">Message</label>
+          </div>
+        </td>
+        <td></td>
+        <td>textarea</td>
       </tr>
       <tr>
         <td>

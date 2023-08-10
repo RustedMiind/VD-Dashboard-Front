@@ -1,7 +1,12 @@
 <div class="section my-2 rtl">
   <h2>Cards</h2>
   <div class="section white">
+    <p>
+      All the cards should be wrapped in div with the class
+      custom-cards-container
+    </p>
     <div class="section custom-cards-container">
+      {% for i in range(0, 10) -%}
       <div class="custom-projects-card">
         <div class="image-container">
           <img
@@ -46,6 +51,7 @@
           </div>
         </div>
       </div>
+      {%- endfor %}
     </div>
   </div>
 </div>

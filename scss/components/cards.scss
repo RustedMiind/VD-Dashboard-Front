@@ -39,7 +39,14 @@
     }
   }
 }
-
+.custom-cards-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .notification-lg-card {
   background-color: var(--main-light);
   width: 100%;

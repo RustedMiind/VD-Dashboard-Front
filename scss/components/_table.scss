@@ -8,6 +8,25 @@ table {
   }
 }
 
+.colored-table-container {
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-color: white;
+  thead {
+    background-color: var(--main-light);
+  }
+  thead {
+    * {
+      border: none;
+    }
+  }
+  th,
+  td {
+    color: inherit !important;
+  }
+  width: 30rem;
+}
+
 @for $i from 0 through 6 {
   .limit-#{$i} {
     max-width: #{$i * 3 + 2}rem;
