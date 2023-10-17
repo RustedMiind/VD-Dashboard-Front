@@ -1,0 +1,74 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+
+<main class="main-view">
+  <div class="d-flex justify-content-between mb-2">
+    <div class="nav-tabs w-fit-content">
+      <a href="" class="active">حضور اليوم</a>
+      <a href="">الموظفين</a>
+      <a href="">الطلبات</a>
+      <a href="">الشكاوي</a>
+    </div>
+
+    <button class="btn btn-outline-primary">
+      <i class="bx bx-filter-alt bx-sm"></i>
+      فلتر
+    </button>
+  </div>
+
+  <div class="section">
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <div class="status active">عدد الحضور: 40</div>
+      <div class="status stopped">عدد الغياب: 16</div>
+      <div class="status">تاريخ اليوم: 17/10/2023</div>
+    </div>
+    <table class="table table-hover table-borderless table-responsive-md">
+      <thead>
+        <tr>
+          <th>الاسم</th>
+          <th>الفرع</th>
+          <th>الادارة</th>
+          <th>الحضور الرسمي</th>
+          <th>الانصراف الرسمي</th>
+          <th>الحضور الفعلي</th>
+          <th>الانصراف الفعلي</th>
+          <th>ساعات التأخير</th>
+          <th>ساعات اضافية</th>
+          <th>طلب اذن</th>
+          <th>اجمالي ساعات اليوم</th>
+          <th>الاجر اليومي</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(0, 20) -%}
+
+        <tr>
+          <td class="text-align-start">
+            <img
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+              alt=""
+              class="user-image active"
+            />
+            محمد احمد
+          </td>
+          <td>جدة</td>
+          <td>رخض</td>
+          <td>8:00</td>
+          <td>12:36</td>
+          <td>7:40</td>
+          <td>2:00</td>
+          <td>2س</td>
+          <td>---</td>
+          <td>
+            <div class="status active">يوجد</div>
+          </td>
+          <td>9س</td>
+          <td>200 رس</td>
+        </tr>
+
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+{% endblock %}

@@ -5,6 +5,7 @@ $body-color: $primary;
 
 .table {
   --#{$prefix}table-bg: transparent;
+  --#{$prefix}table-color: $primary;
 }
 
 html {

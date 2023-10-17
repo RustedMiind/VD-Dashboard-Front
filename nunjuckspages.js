@@ -38,5 +38,9 @@ module.exports = [
     from: "templates/notifications.njk",
     to: "notifications.html",
   },
+  {
+    from: "templates/attendance.njk",
+    to: "attendance.html",
+  },
   ...projectsPages,
 ];
