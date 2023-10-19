@@ -1,59 +1,59 @@
 :root {
   --sidebar-width: 15rem;
   --sidebar-display: block;
+  --navbar-height: 72px;
 }
 
 .layout {
-  display: flex;
-  position: static;
+  // display: flex;
+  // position: static;
   top: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
-  .body-container {
-    // display: --sidebar-display;
-    position: relative;
-    width: calc(100vw - var(--sidebar-width));
-    height: 100%;
-  }
-  .main-view {
-    max-height: calc(100% - 4.5rem);
-    overflow: hidden;
-    overflow-y: scroll;
-    padding: 1.6rem;
-  }
-  .sidebar-logo {
-    text-align: center;
-    margin-bottom: 4.375rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+  // height: 100vh;
+  // max-height: 100vh;
+}
+.body-container {
+  width: calc(100% - var(--sidebar-width));
+  height: 100%;
+}
+.main-view {
+  padding: 1rem;
+  width: calc(100% - var(--sidebar-width));
+  margin-right: var(--sidebar-width);
+  margin-top: var(--navbar-height);
+}
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 4.375rem;
 
-    img {
-      width: 6.875rem;
-      height: 4rem;
-      object-fit: contain;
-      margin-bottom: 0.9375rem;
-    }
-
-    figcaption {
-      font-size: 1.125rem;
-      font-weight: bold;
-      color: var(--font-light);
-    }
+  img {
+    width: 6.875rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 0.9375rem;
   }
 
-  .main-content {
-    width: 100%;
-
-    .main-Carousel {
-      max-width: 100%;
-    }
-
-    // margin-right: 15rem;
-    margin-top: 6rem;
-    padding: 1.875rem;
-    overflow: hidden;
-    height: calc(100% - 6rem);
-    overflow-y: scroll;
-    position: relative;
+  figcaption {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--font-light);
   }
+}
+
+.main-content {
+  width: 100%;
+
+  .main-Carousel {
+    max-width: 100%;
+  }
+
+  // margin-right: 15rem;
+  margin-top: 6rem;
+  padding: 1.875rem;
+  overflow: hidden;
+  height: calc(100% - 6rem);
+  overflow-y: scroll;
+  position: relative;
 }

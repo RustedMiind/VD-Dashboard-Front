@@ -1,5 +1,7 @@
 .main-sidebar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
   width: var(--sidebar-width);
   display: var(--sidebar-display);
   height: 100vh;
@@ -97,12 +99,14 @@
   @media (max-width: 1024px) {
     overflow: hidden;
     position: fixed;
-    left: 100%;
+    left: 100vw;
     width: 100vw;
+    opacity: 0;
     pointer-events: none;
     &.show {
       pointer-events: all;
       left: 0;
+      opacity: 1;
     }
   }
 }

@@ -31,11 +31,8 @@
   </head>
   <body>
     <div id="app" class="layout" data-v-app="">
-      {% include "templates/components/sidebar.njk" %}
-      <div class="body-container">
-        {% include "templates/components/navbar.njk" %} {% block content %} {%
-        endblock %}
-      </div>
+      {% include "templates/components/sidebar.njk" %} {% include
+      "templates/components/navbar.njk" %} {% block content %} {% endblock %}
     </div>
   </body>
 
