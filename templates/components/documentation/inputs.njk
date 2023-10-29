@@ -90,6 +90,27 @@
       </tr>
       <tr>
         <td>
+          <input
+            class="form-control"
+            name="basic"
+            value="tag1, tag2 autofocus"
+          />
+        </td>
+        <td>
+          parent: form-group<br />
+          input: form-control
+        </td>
+        <td>input[type="date"]</td>
+      </tr>
+      <script>
+        // The DOM element you wish to replace with Tagify
+        var input = document.querySelector("input[name=basic]");
+
+        // initialize Tagify on the above input node reference
+        new Tagify(input);
+      </script>
+      <tr>
+        <td>
           <div class="form-group">
             <label for="usr">Label</label>
             <select type="text" class="form-control error" id="usr">
