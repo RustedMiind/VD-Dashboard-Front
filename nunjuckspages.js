@@ -17,6 +17,20 @@ const projectsPages = [
   },
 ];
 
+const middlemanPages = [
+  {
+    from: "templates/middleman/add-middleman.njk",
+    to: "add-middleman.html",
+  },
+];
+
+const clientsPages = [
+  {
+    from: "templates/clients/add-client.njk",
+    to: "add-client.html",
+  },
+];
+
 module.exports = [
   {
     from: "templates/index.njk",
@@ -43,4 +57,6 @@ module.exports = [
     to: "attendance.html",
   },
   ...projectsPages,
+  ...middlemanPages,
+  ...clientsPages,
 ];

@@ -1,0 +1,149 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+
+<main class="main-view">
+  <h5>اضافة عميل</h5>
+  <div class="col-6 col-md-4 p-2">
+    <label for="payment-method"> نوع العميل </label>
+    <div>
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1"> فرد </label>
+        </div>
+        <div class="col-md-6">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2"> شركة </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-xl mx-0 section">
+    <div class="row">
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">اسم الشركة</label>
+          <input type="text" class="form-control" placeholder="اسم الشركة" />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">السجل التجاري</label>
+          <input type="text" class="form-control" placeholder="السجل التجاري" />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">رقم الجوال</label>
+          <input type="text" class="form-control" placeholder="رقم الجوال" />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">البريد الالكتروني</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="البريد الالكتروني"
+          />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">اسم الوكيل</label>
+          <input type="text" class="form-control" placeholder="اسم الوكيل" />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">الوسيط</label>
+          <input type="text" class="form-control" placeholder="الوسيط" />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">الفرع</label>
+          <select class="form-select" name="" id="">
+            <option value="">الفرع الاول</option>
+            <option value="">الفرع الاول</option>
+            <option value="">الفرع الاول</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-2">
+        <div class="form-group">
+          <label for="name">ارفاق صورة السجل التجاري</label>
+          <label class="select-image">
+            <div class="file-info-card d-none">
+              <div class="file-extension"></div>
+              <div class="file-name-and-size">
+                <h5>name.ext</h5>
+                <p>Size MB</p>
+              </div>
+              <div>
+                <span class="icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check-lg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="to-hide">
+              <p>ارفاق صورة</p>
+              <span>حجم الصورة لا يزيد عن 10MB</span>
+              <span class="icon icon-add">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                  />
+                </svg>
+              </span>
+              <input type="file" class="image-upload" style="display: none" />
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="col-12 p-2">
+        <div class="form-group">
+          <label for="name">عنوان المراسلات</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="عنوان المراسلات"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/inputFile.js"></script>
+
+{% endblock %}
