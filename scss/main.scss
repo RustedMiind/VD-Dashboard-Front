@@ -118,8 +118,8 @@ a {
 .status {
   display: inline-block;
   // margin: 0.4rem;
-  padding: 0.2em;
-  width: 8rem;
+  padding: 0.2em 0.6em;
+  min-width: 8rem;
   text-align: center;
   background-color: var(--main-bg);
   color: var(--main);
