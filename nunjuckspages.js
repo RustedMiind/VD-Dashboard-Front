@@ -31,6 +31,13 @@ const clientsPages = [
   },
 ];
 
+const requestsPages = [
+  {
+    from: "templates/requests/all-requests.njk",
+    to: "all-requests.html",
+  },
+];
+
 module.exports = [
   {
     from: "templates/index.njk",
@@ -59,4 +66,5 @@ module.exports = [
   ...projectsPages,
   ...middlemanPages,
   ...clientsPages,
+  ...requestsPages,
 ];

@@ -1,0 +1,100 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+
+<main class="main-view">
+  <h4 class="mb-4">طلبات الموظفين</h4>
+  <div class="row mb-4">
+    <div class="col-md-8 col-12 row mb-2">
+      <div class="col-10">
+        <input type="text" class="form-control" placeholder="بحث" />
+      </div>
+      <div class="col-2">
+        <button class="btn btn-primary w-100 px-1">بحث</button>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 row">
+      <div class="col-6">
+        <button class="btn btn-primary w-100 px-1 btn-icon">
+          <i class="bx bx-printer"></i>
+          طباعة
+        </button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-outline-primary w-100 px-1">
+          <i class="bx bx-filter-alt"></i>
+          فلتر
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-md-6">
+      <nav class="nav-tabs">
+        <a href="#" class="active">الكل</a>
+        <a href="#">وارد</a>
+        <a href="#">صادر</a>
+      </nav>
+    </div>
+
+    <div class="col-lg-4 col-md-6 row row-reverse">
+      <div class="col-4">
+        <button class="btn w-100 btn-outline-primary px-1">
+          <div class="icon-with-value">
+            اجازات
+            <div class="value">4</div>
+          </div>
+        </button>
+      </div>
+
+      <div class="col-4">
+        <button class="btn w-100 btn-outline-primary px-1">مهام عمل</button>
+      </div>
+
+      <div class="col-4">
+        <button class="btn w-100 btn-outline-primary px-1">سلف</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <table
+      class="w-fit-content table table-hover table-borderless table-responsive-md"
+    >
+      <thead>
+        <tr>
+          <th></th>
+          <th class="text-end">الاسم</th>
+          <th>تاريخ الورود</th>
+          <th>نوع الطلب</th>
+          <th>القسم</th>
+          <th>حالة الطلب</th>
+          <th>الملاحظات</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(0, 30) -%}
+
+        <tr>
+          <td class="text-start">
+            <img
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+              alt=""
+              class="user-image active"
+            />
+          </td>
+          <td class="text-end">محمد احمد {{ i }}</td>
+          <td>{{ i }}/12/2012</td>
+          <td>اجازة</td>
+          <td>اداري</td>
+          <td><div class="status active">معتمد</div></td>
+          <td>
+            <div class="limit-3">نص يتم استبداله هنا</div>
+          </td>
+        </tr>
+
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+{% endblock %}

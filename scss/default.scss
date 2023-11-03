@@ -372,6 +372,7 @@ form .input-section {
   display: inline-flex !important;
   flex-direction: row !important;
   align-items: center !important;
+  justify-content: center;
   gap: 0.4rem;
   i.bx {
     // position: static !important;
