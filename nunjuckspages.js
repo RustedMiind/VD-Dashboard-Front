@@ -36,6 +36,10 @@ const requestsPages = [
     from: "templates/requests/all-requests.njk",
     to: "all-requests.html",
   },
+  {
+    from: "templates/requests/orders-procedures.njk",
+    to: "orders-procedures.html",
+  },
 ];
 
 module.exports = [

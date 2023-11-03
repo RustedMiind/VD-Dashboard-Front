@@ -1,0 +1,57 @@
+{% extends "templates/layout/app.html" %} {% block content %}
+
+<main class="main-view">
+  <div class="col-12 row mb-2">
+    <div class="col-9">
+      <input type="text" class="form-control" placeholder="بحث" />
+    </div>
+
+    <div class="col-3 row">
+      <div class="col-7">
+        <button class="btn btn-primary w-100 px-1">بحث</button>
+      </div>
+      <div class="col-5">
+        <button class="btn btn-outline-primary w-100 px-1">
+          <i class="bx bx-filter-alt"></i>
+          فلتر
+        </button>
+      </div>
+    </div>
+  </div>
+  <h4 class="mb-4">طلبات الموظفين</h4>
+  <nav class="nav-tabs">
+    <a href="#" class="active">الاجازات</a>
+    <a href="#">مهمة عمل</a>
+    <a href="#">السلف</a>
+    <a href="#">العهدة</a>
+    <a href="#">احتياجات العمل</a>
+    <a href="#">صيانة سيارة</a>
+  </nav>
+  <div class="section">
+    <button
+      class="btn btn-primary w-100"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      طلبات الموظفين
+    </button>
+    <div class="collapse" id="collapseExample">
+      <div class="section white mt-2">
+        <table class="table table-borderless text-end">
+          <thead>
+            <th>مدير القسم الوظيفي</th>
+            <th>الموظف</th>
+            <th>موافقة</th>
+            <th>مدة التجاول</th>
+            <th>مدير</th>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
