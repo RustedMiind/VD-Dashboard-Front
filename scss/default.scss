@@ -9,6 +9,10 @@ html::-webkit-scrollbar,
   // display: none;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 .ltr {
   direction: ltr;
 }

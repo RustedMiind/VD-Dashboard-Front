@@ -2,7 +2,7 @@
 
 <main class="main-view">
   <h4 class="mb-4">طلبات الموظفين</h4>
-  <div class="row mb-4">
+  <div class="row">
     <div class="col-md-8 col-12 row mb-2">
       <div class="col-10">
         <input type="text" class="form-control" placeholder="بحث" />
@@ -19,14 +19,53 @@
         </button>
       </div>
       <div class="col-6">
-        <button class="btn btn-outline-primary w-100 px-1">
+        <button
+          class="btn btn-outline-primary w-100 px-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#filter"
+          aria-expanded="false"
+          aria-controls="filter"
+        >
           <i class="bx bx-filter-alt"></i>
           فلتر
         </button>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="collapse" id="filter">
+    <div class="py-4 d-flex flex-row flex-wrap">
+      <div class="d-flex flex-row align-items-center gap-1 flex-grow-2">
+        <label class="d-block" for="">تاريخ الورود</label>
+        <input type="date" class="form-control limit-3" />
+      </div>
+      <div class="d-flex flex-row align-items-center gap-1 flex-grow-2">
+        <label class="d-block" for="">تاريخ الانتهاء</label>
+        <input type="date" class="form-control limit-3" />
+      </div>
+      <div class="d-flex flex-row align-items-center gap-1 flex-grow-1">
+        <select name="" id="" class="form-select limit-3">
+          <option value="s">نوع الطلب</option>
+        </select>
+      </div>
+      <div class="d-flex flex-row align-items-center gap-1 flex-grow-1">
+        <select name="" id="" class="form-select limit-3">
+          <option value="s">القسم</option>
+        </select>
+      </div>
+      <div class="d-flex flex-row align-items-center gap-1 flex-grow-1">
+        <select name="" id="" class="form-select limit-3">
+          <option value="s">حالة الطلب</option>
+        </select>
+      </div>
+      <div class="d-flex flex-row align-items-center gap-1 flex-grow-1">
+        <select name="" id="" class="form-select limit-3">
+          <option value="s">الترتيب</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
     <div class="col-lg-8 col-md-6">
       <nav class="nav-tabs">
         <a href="#" class="active">الكل</a>
@@ -85,7 +124,16 @@
           <td>{{ i }}/12/2012</td>
           <td>اجازة</td>
           <td>اداري</td>
-          <td><div class="status active">معتمد</div></td>
+          <td>
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#request-status"
+              type="button"
+              class="status active"
+            >
+              معتمد
+            </button>
+          </td>
           <td>
             <div class="limit-3">نص يتم استبداله هنا</div>
           </td>
@@ -96,5 +144,61 @@
     </table>
   </div>
 </main>
+
+<div
+  class="modal modal-xl fade"
+  id="request-status"
+  tabindex="-1"
+  aria-labelledby="request-status-label"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <section class="section">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th>اسم الموظف</th>
+                <th>تاريخ الورود</th>
+                <th>تاريخ الانتهاء</th>
+                <th>القسم الوظيفي</th>
+                <th>حالة الطلب</th>
+                <th>الملاحظات</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in range(0, 6) -%}
+              <tr>
+                <td>اسم الموظف</td>
+                <td>23/4/1999</td>
+                <td>23/4/2023</td>
+                <td>مدير</td>
+                <td>
+                  <div class="status active">مقبول</div>
+                </td>
+                <td>هذا النص هو مثال لنص يمكن..</td>
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          رجوع
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
